@@ -1,0 +1,952 @@
+/***
+ Plugin Name: Jthemes kits
+ Description: Elementor elements for services, portfolios, blogs etc
+ Version: 1.0.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
+.color-grey-900 {
+    color: #041C2F;
+}
+
+.bg-grey-900 {
+    background-color: #041C2F;
+}
+
+.color-success {
+    color: #16BA8F;
+}
+
+.color-warning {
+    color: #F69D30;
+}
+
+.color-danger {
+    color: #FF3E3E;
+}
+
+.color-mutted {
+    color: #E8E9ED;
+}
+
+.color-info {
+    color: #28A7E6;
+}
+
+.color-white {
+    color: #fff;
+}
+
+/*-----slider--------*/
+.banner-1 {
+    padding: 130px 0px 200px 0px;
+    height: 700px;
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box-swiper .swiper-banner-1 {
+    padding-bottom: 0px;
+}
+
+
+.box-slider-service-4 {
+    top: auto;
+    padding: 0px;
+}
+
+.box-slider-service-4 .card-offer {
+    padding: 30px 20px 30px 20px;
+}
+
+.box-slider-service-4 .box-swiper .swiper-container {
+    padding-top: 30px;
+}
+
+.box-slider-service-4 .swiper-button-prev-style-2 {
+    background-color: #E8E9ED;
+    border-color: #F2F3F4;
+    top: 40%;
+}
+
+.box-slider-service-4 .swiper-button-prev-style-2:hover {
+    background-color: #FEC201;
+}
+
+.box-slider-service-4 .swiper-button-next-style-2 {
+    background-color: #E8E9ED;
+    border-color: #F2F3F4;
+    top: 40%;
+}
+
+.box-slider-service-4 .swiper-button-next-style-2:hover {
+    background-color: #FEC201;
+}
+
+.box-image-why-info-8::before {
+    display: none;
+}
+
+.box-image-why-info-8 .box-button-play {
+    left: -20px;
+}
+
+.box-info-8 {
+    padding-left: 0px;
+}
+
+.box-swiper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.posts-content .box-swiper {
+    overflow: visible;
+}
+
+.posts-content .box-button-sliders {
+    position: absolute;
+    display: inline-block;
+    min-width: 100px;
+    top: -100px;
+    right: 0;
+    z-index: 99;
+}
+
+.box-swiper .swiper-container {
+    position: relative;
+    height: 100%;
+}
+
+.box-swiper .swiper-container .item-logo {
+    border: 1px solid #ccc;
+    padding: 39px 0px 36px 0px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 5px 30px rgba(19, 27, 34, 0.12);
+}
+
+.box-swiper .swiper-container .item-logo img {
+    max-width: 100%;
+}
+
+.box-swiper .swiper-container .item-logo:hover {
+    border: 1px solid #ccc;
+    box-shadow: 9px 11px 23px 0px rgba(6, 61, 79, 0.12);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: "";
+}
+
+.swiper-button-next {
+    background: url(../images/slider/swiper/next.svg) no-repeat 0px 0px;
+}
+
+.swiper-button-next:hover {
+    background: url(../images/slider/swiper/next.svg) no-repeat 0px 0px;
+}
+
+.swiper-button-prev {
+    background: url(../images/slider/swiper/prev.svg) no-repeat 0px 0px;
+}
+
+.swiper-button-prev:hover {
+    background: url(../images/slider/swiper/prev.svg) no-repeat 0px 0px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 31px;
+    height: 31px;
+    margin-top: 0px;
+}
+
+.swiper-button-next {
+    left: auto;
+    right: 0px;
+    top: 20px;
+}
+
+.swiper-button-prev {
+    left: auto;
+    right: 40px;
+    top: 20px;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 6px;
+}
+
+.swiper-pagination {
+    text-align: center;
+    width: 100%;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.6;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #FEC201;
+    width: 12px;
+    height: 12px;
+    border-radius: 7px;
+}
+
+.swiper-pagination.swiper-pagination-2 .swiper-pagination-bullet {
+    background: #F2F3F4;
+}
+
+.swiper-pagination.swiper-pagination-2 .swiper-pagination-bullet-active {
+    background: #FEC201;
+}
+
+.swiper-pagination-bullet {
+    margin: 10px;
+}
+
+/*Style of the location of the div that wraps the custom pager*/
+.swiper-pagination-custom {
+    bottom: 40px;
+    padding-left: 70px;
+}
+
+.swiper-pagination-customs {
+    background: url(../images/slider/swiper/dot.svg) no-repeat 0px 0px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/*Customize the style representation when pager is activated*/
+.swiper-pagination-customs-active,
+.swiper-pagination-customs:hover {
+    background: url(../imgs/slider/swiper/dot-active.svg) no-repeat 0px 0px;
+    width: 12px;
+    height: 12px;
+    margin-bottom: -1px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.box-button-slider {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.swiper-group-1 .swiper-pagination {
+    bottom: 50px;
+    left: 55px;
+}
+
+.swiper-group-1.swiper-home-3 .swiper-pagination {
+    left: 0px;
+}
+
+.swiper-group-1.home-9 .swiper-pagination {
+    bottom: 20px;
+    left: 25px;
+}
+
+/* This line can be removed it was just for display on CodePen: */
+.slider-labels {
+    margin-top: 10px;
+}
+
+.btn.btn-play svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.map-info {
+    background-color: #ffffff;
+    padding: 35px 31px;
+    margin-left: 38px;
+}
+
+.color-brand-1 {
+    color: #FEC201;
+}
+
+/*-------title-------*/
+.heading-content svg,
+.heading-content i,
+.heading-content img {
+    margin-bottom: 15px;
+}
+
+.heading-content h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.heading-content.heading-style3 h2 {
+    margin-top: 0;
+}
+
+.heading-content .title-description {
+    font-size: 16px;
+}
+
+.heading-inline-icon {
+    margin-right: 10px;
+}
+
+.heading-style2,
+.heading-style-three {
+    display: flex;
+}
+
+.heading-content .title-subtitle.display-yes {
+    display: inline-block;
+}
+
+/*------------partner-------------*/
+.partner-content p span {
+    color: #FEC201;  
+}
+
+.partner-content .font-2xl-bold {
+    font-weight: 600;
+    line-height: 32px;
+    font-size: 24px;
+    color: #034460;
+}
+
+/*-----------feature list-------*/
+
+.list-ticks {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.list-ticks li {
+    width: 50%;
+    color: #818692;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 16px;
+    list-style: none;
+}
+
+.list-ticks li svg,
+.list-ticks li i {
+     height: 22px;
+     margin-right: 10px;
+    color: #034460;
+}
+
+.hover-up.popular .list-ticks li svg,
+.hover-up.popular .list-ticks li i {
+    color: #FEC201;   
+}
+
+.list-ticks.list-ticks-2 li {
+    width: 100%;
+}
+
+.list-ticks.list-ticks-2 li:last-child {
+    margin-bottom: 0px;
+}
+
+.list-ticks.list-ticks-2 li svg {
+    color: #034460;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.list-how-works {
+    padding: 0;
+}
+
+.list-how-works li {
+    display: flex;
+    width: 100%;
+    padding-bottom: 45px;
+    align-items: center;
+}
+
+.list-how-works li .image-how {
+    max-width: 84px;
+    min-width: 84px;
+    margin-right: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.list-how-works li .image-how .img {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: #FFE799;
+    border: 1px solid #FEC201;
+    display: inline-block;
+}
+
+.list-how-works li .image-how .img img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.list-how-works li .image-how::before {
+    content: "";
+    height: 45px;
+    width: 2px;
+    background: url(../images/featured-lists/dashed.png) no-repeat top left;
+    position: absolute;
+    top: 100%;
+    left: 41px;
+}
+
+.list-how-works li .info-how {
+    width: 100%;
+}
+
+.list-how-works li .info-how h5,
+.list-how-works li .info-how p {
+    margin: 0;
+}
+
+.list-how-works li .info-how p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.list-how-works li:last-child .image-how::before {
+    display: none;
+}
+
+.box-list-how-it-work .list-how-works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box-list-how-it-work .list-how-works li {
+    width: 33.33%;
+    padding: 0px 15px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.box-list-how-it-work .list-how-works li .image-how {
+    max-width: 100%;
+    min-width: 100%;
+    margin-right: 0px;
+    margin-bottom: 21px;
+}
+
+.box-list-how-it-work .list-how-works li .image-how .img img {
+    max-height: 100%;
+    max-width: 87%;
+}
+
+.box-list-how-it-work .list-how-works li .image-how::before {
+    display: none;
+}
+
+.box-list-how-it-work .list-how-works li::before {
+    content: "";
+    width: 100%;
+    top: 41px;
+    left: 50%;
+    height: 2px;
+    background: url(../images/featured-lists/bg-dashed.png) repeat-x top left;
+    position: absolute;
+}
+
+.box-list-how-it-work .list-how-works li:last-child::before {
+    display: none;
+}
+
+.box-list-how-it-work .list-how-works li.dashed-2::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 3px;
+    height: 60px;
+    background: url(../images/featured-lists/bg-dashed-2.png) no-repeat top left;
+}
+
+.hover-up {
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up:hover {
+    transform: translateY(-2px);
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.featured-lists .font-sm.color-grey-900 {    
+    margin: 0;
+}
+
+.featured-lists .font-sm-bold.color-grey-900 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.team-content h6 {
+    margin: 0;
+}
+
+/*---------icon list----------*/
+
+.chart-title {
+    padding-left: 0;
+    margin-bottom: 7px;
+    margin-top: 0;
+}
+
+.feature-title {
+    padding-left: 0;
+    margin-bottom: 7px;
+    margin-top: 0;
+}
+
+/*----------counter up-------*/
+
+.cardLeadingCompany {
+    display: inline-block;
+    width: 100%;
+    background-color: #034460;
+    border: 1px solid #2C7DA1;
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.cardLeadingCompany .cardImage {
+    margin-bottom: 20px;
+}
+
+.cardLeadingCompany .cardImage .img {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    text-align: center;
+    vertical-align: middle;
+    background: #E8E9ED;
+    border: 1px solid #FEC201;
+    border-radius: 50%;
+}
+
+.cardLeadingCompany .cardImage .img img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cardLeadingCompany:hover {
+    background-color: #1C6180;
+}
+
+.cardLeadingCompany:hover .cardImage .img {
+    background-color: #FEC201;
+}
+
+.cardLeadingCompany .cardInfo .color-brand-1 {
+    margin-bottom: 2px;
+}
+
+.cardTeam {
+    position: relative;
+}
+
+.cardTeam .cardImage {
+    position: relative;
+}
+
+.cardTeam .cardImage img {
+    width: 100%;
+}
+
+.cardTeam .cardInfo {
+    position: absolute;
+    bottom: -20px;
+    left: 18px;
+    right: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 42px rgba(1, 9, 20, 0.06);
+    justify-content: space-between;
+}
+
+.cardTeam .cardInfo .info-bottom {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardTeam .cardInfo .info-bottom p a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.cardTeam .cardInfo .info-bottom p a svg {
+    fill: #818692;
+}
+
+.cardTeam .cardInfo:hover {
+    background-color: #034460;
+}
+
+.cardTeam .cardInfo:hover .color-brand-2 {
+    color: #FEC201 !important;
+}
+
+.cardTeam .cardInfo .info-bottom p {
+    margin: 0;
+}
+
+.cardTeam .cardInfo:hover .info-bottom p {
+    color: #fff;
+}
+
+.cardTeam .cardInfo:hover .info-bottom p a svg,
+.cardTeam .cardInfo:hover .info-bottom p a i {
+    fill: #fff;
+    color: #fff;
+}
+
+.cardService {
+    position: relative;
+}
+
+.cardService .cardImage {
+    position: relative;
+}
+
+.cardService .cardImage img {
+    width: 100%;
+}
+
+.cardService .cardInfo {
+    position: absolute;
+    bottom: -20px;
+    left: 18px;
+    right: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 42px rgba(1, 9, 20, 0.06);
+    justify-content: space-between;
+}
+
+.cardService .cardInfo p:last-child {
+    margin-bottom: 0;
+}
+
+.cardService .cardInfo img {
+    max-height: 34px;
+    width: auto;
+}
+
+.cardService .cardInfo h6 {
+    margin-top: 8px;
+    margin-bottom: 8px!important;
+}
+
+.cardService .cardInfo:hover {
+    background-color: #034460;
+}
+
+.cardService .cardInfo:hover .color-brand-2 {
+    color: #FEC201;
+}
+
+.cardService .cardInfo:hover .color-grey-900 {
+    color: #fff;
+}
+
+.cardServiceStyle3:hover {
+    background-color: #034460;
+}
+
+.cardServiceStyle3:hover .card-info .color-brand-2 {
+    color: #FEC201;
+}
+
+.cardServiceStyle3:hover .card-info .color-grey-900 {
+    color: #fff;
+}
+
+.cardService .font-xs {
+    font-size: 12px;
+}
+
+.cardGrid {
+    background-color: #ffffff;
+    padding-bottom: 172px;
+    position: relative;
+    border: 1px solid #E8E9ED;
+}
+
+.cardGrid:hover {
+    border-color: #034460;
+}
+
+.cardGrid .cardImage img {
+    display: block;
+    width: 100%;
+}
+
+.cardGrid .cardInfo {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 24px;
+}
+
+/*-------------testimonials--------*/
+
+.card-testimonial-grid {
+    border-radius: 0px;
+    display: inline-block;
+    width: 100%;
+    padding: 34px 34px 24px 34px;
+    border: 1px solid #E8E9ED;
+    transition-duration: 0.2s;
+    background-color: #ffffff;
+}
+
+.card-testimonial-grid:hover {
+    border: 1px solid #FEC201;
+}
+
+.card-testimonial-grid a {
+    text-decoration: none;
+}
+
+.card-testimonial-grid .card-bottom-info {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    background-color: #034460;
+    color: #fff;
+    padding: 17px 25px;
+    margin-top: 20px;
+}
+
+.card-testimonial-grid .card-bottom-info .rate-post {
+    width: 30%;
+    color: #fff;
+    font-weight: 600;
+}
+
+.card-testimonial-grid .card-bottom-info .rating {
+    width: 70%;
+}
+
+.card-testimonial-grid .card-bottom-info .rating img {
+    width: 12px;
+    margin-right: 2px;
+}
+
+.card-testimonial-grid.card-testimonial-3 {
+    padding: 26px 26px 24px 26px;
+}
+
+.card-testimonial-grid .card-bottom-info {
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.card-testimonial-grid .card-bottom-info .rate-post {
+    width: 50%;
+}
+
+.card-testimonial-grid .card-bottom-info .rating {
+    width: 50%;
+}
+
+.card-testimonial-grid {
+    padding: 20px 20px 20px 20px;
+}
+
+.box-author {
+    display: flex;
+    align-items: center;
+}
+
+.box-author img {
+    max-width: 72px;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: block;
+}
+
+.box-author .author-info .author-name {
+    display: block;
+    color: #034460;
+}
+
+.card-testimonial-grid p {
+    color: #5B647C;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.box-author .author-info img {
+    width: 12px;
+    height: auto;
+    border-radius: 0;
+    margin-right: 0px;
+    max-width: 100%;
+}
+
+.box-pagination-customers {
+    position: relative;
+    margin-top: 48px;
+}
+
+.font-xl-bold {
+    font-weight: 600;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+.font-sm {
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.rating-testi {
+    font-size: 12px;
+    color: #FEC201;
+}
+
+.blog-posts-content .box-button-sliders {
+    position: absolute;
+    right: 0;
+    top: -100px;
+}
+
+.blog-posts-content .box-swiper {
+    overflow: visible;
+}
+
+.blog-posts-content .box-swiper .swiper-container {
+    overflow: hidden;
+}
+
+/*-----------video popup-------*/
+
+.box-info-bottom-img h4 {
+    margin-top: 0;
+}
+
+.box-info-bottom-img p {
+    margin-bottom: 0;
+}
+
+/*---------list icon-------*/
+.listicon-content p {
+    font-size: 12px;
+}
+
+@media (max-width: 1399.98px) {
+    .card-plan {
+        padding: 20px 15px;
+    }
+
+    .card-plan .card-image-plan .icon-plan {
+        max-width: 72px;
+        min-width: 72px;
+        margin-right: 10px;
+        height: 72px;
+        line-height: 72px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .card-plan {
+        padding: 20px;
+    }
+
+    .card-plan .card-image-plan .icon-plan {
+        max-width: 82px;
+        min-width: 82px;
+        margin-right: 15px;
+        height: 82px;
+        line-height: 82px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .box-container-sw .box-swiper {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .list-ticks {
+        display: block;
+    }
+    
+    .calculate-shipping-form select {
+        max-width: 100%;
+        float: none;
+    }
+
+    .posts-content .box-button-sliders {
+        left: 10px;
+        right: auto;
+        top: 10px;
+    }
+}
+

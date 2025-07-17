@@ -1,0 +1,1264 @@
+@font-face {
+    font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?t9hqth');
+  src:  url('../fonts/icomoon.eot?t9hqth#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?t9hqth') format('truetype'),
+    url('../fonts/icomoon.woff?t9hqth') format('woff'),
+    url('../fonts/icomoon.svg?t9hqth#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.cs-icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cs-113-next:before {
+    content: "\f170";
+  }
+  .cs-070-depilation:before {
+    content: "\f145";
+  }
+  .cs-074-spa-3:before {
+    content: "\f149";
+  }
+  .cs-101-cream-3:before {
+    content: "\f164";
+  }
+  .cs-024-sandals:before {
+    content: "\f117";
+  }
+  .cs-058-kettle:before {
+    content: "\f139";
+  }
+  .cs-017-waterdrop:before {
+    content: "\f110";
+  }
+  .cs-102-essential-oil-2:before {
+    content: "\f165";
+  }
+  .cs-054-massage-1:before {
+    content: "\f135";
+  }
+  .cs-104-lotus-1:before {
+    content: "\f167";
+  }
+  .cs-066-towels:before {
+    content: "\f141";
+  }
+  .cs-085-yoga-mat:before {
+    content: "\f154";
+  }
+  .cs-023-essential-oil-1:before {
+    content: "\f116";
+  }
+  .cs-034-candle-1:before {
+    content: "\f121";
+  }
+  .cs-014-herb:before {
+    content: "\f10d";
+  }
+  .cs-089-towel-1:before {
+    content: "\f158";
+  }
+  .cs-043-facial-treatment:before {
+    content: "\f12a";
+  }
+  .cs-088-soap:before {
+    content: "\f157";
+  }
+  .cs-106-essential-oil-4:before {
+    content: "\f169";
+  }
+  .cs-009-washbowl:before {
+    content: "\f108";
+  }
+  .cs-051-aromatherapy:before {
+    content: "\f132";
+  }
+  .cs-004-nail-polish:before {
+    content: "\f103";
+  }
+  .cs-047-hot-stone:before {
+    content: "\f12e";
+  }
+  .cs-013-juice:before {
+    content: "\f10c";
+  }
+  .cs-095-honey-1:before {
+    content: "\f15e";
+  }
+  .cs-109-pills:before {
+    content: "\f16c";
+  }
+  .cs-002-lotus:before {
+    content: "\f101";
+  }
+  .cs-114-back:before {
+    content: "\f171";
+  }
+  .cs-060-cream-2:before {
+    content: "\f13b";
+  }
+  .cs-090-lotion:before {
+    content: "\f159";
+  }
+  .cs-125-facial-treatment-2:before {
+    content: "\f17c";
+  }
+  .cs-096-towels-1:before {
+    content: "\f15f";
+  }
+  .cs-003-cream:before {
+    content: "\f102";
+  }
+  .cs-019-hot-tub:before {
+    content: "\f112";
+  }
+  .cs-033-washbasin:before {
+    content: "\f120";
+  }
+  .cs-010-herbs:before {
+    content: "\f109";
+  }
+  .cs-127-settings:before {
+    content: "\f17e";
+  }
+  .cs-132-teapot:before {
+    content: "\f183";
+  }
+  .cs-029-hairdryer:before {
+    content: "\f11c";
+  }
+  .cs-080-aroma:before {
+    content: "\f14f";
+  }
+  .cs-111-towels-2:before {
+    content: "\f16e";
+  }
+  .cs-116-olive-branch:before {
+    content: "\f173";
+  }
+  .cs-059-herbal:before {
+    content: "\f13a";
+  }
+  .cs-040-body-scrub:before {
+    content: "\f127";
+  }
+  .cs-130-essential-oil-5:before {
+    content: "\f181";
+  }
+  .cs-037-bamboo-1:before {
+    content: "\f124";
+  }
+  .cs-031-closet:before {
+    content: "\f11e";
+  }
+  .cs-118-bamboo-4:before {
+    content: "\f175";
+  }
+  .cs-039-bucket:before {
+    content: "\f126";
+  }
+  .cs-071-bamboo-2:before {
+    content: "\f146";
+  }
+  .cs-065-oil-2:before {
+    content: "\f140";
+  }
+  .cs-048-oil:before {
+    content: "\f12f";
+  }
+  .cs-038-aromatic-candle:before {
+    content: "\f125";
+  }
+  .cs-108-stopwatch:before {
+    content: "\f16b";
+  }
+  .cs-067-sauna-2:before {
+    content: "\f142";
+  }
+  .cs-030-hair-cream:before {
+    content: "\f11d";
+  }
+  .cs-016-foot:before {
+    content: "\f10f";
+  }
+  .cs-044-massage:before {
+    content: "\f12b";
+  }
+  .cs-068-massage-2:before {
+    content: "\f143";
+  }
+  .cs-128-gift:before {
+    content: "\f17f";
+  }
+  .cs-055-water:before {
+    content: "\f136";
+  }
+  .cs-077-flower-1:before {
+    content: "\f14c";
+  }
+  .cs-032-makeup:before {
+    content: "\f11f";
+  }
+  .cs-110-spa-5:before {
+    content: "\f16d";
+  }
+  .cs-076-mortar-2:before {
+    content: "\f14b";
+  }
+  .cs-049-mortar-1:before {
+    content: "\f130";
+  }
+  .cs-011-mortar:before {
+    content: "\f10a";
+  }
+  .cs-057-hot-stones:before {
+    content: "\f138";
+  }
+  .cs-103-stones:before {
+    content: "\f166";
+  }
+  .cs-091-foot-massage-1:before {
+    content: "\f15a";
+  }
+  .cs-072-foot-massage:before {
+    content: "\f147";
+  }
+  .cs-035-sauna:before {
+    content: "\f122";
+  }
+  .cs-021-tea:before {
+    content: "\f114";
+  }
+  .cs-018-aromatic:before {
+    content: "\f111";
+  }
+  .cs-099-massage-4:before {
+    content: "\f162";
+  }
+  .cs-062-slipper:before {
+    content: "\f13d";
+  }
+  .cs-083-flip-flop:before {
+    content: "\f152";
+  }
+  .cs-056-bathrobe-1:before {
+    content: "\f137";
+  }
+  .cs-046-hot-spring:before {
+    content: "\f12d";
+  }
+  .cs-119-branch-2:before {
+    content: "\f176";
+  }
+  .cs-015-honey:before {
+    content: "\f10e";
+  }
+  .cs-036-spa-1:before {
+    content: "\f123";
+  }
+  .cs-064-candle-2:before {
+    content: "\f13f";
+  }
+  .cs-027-burner:before {
+    content: "\f11a";
+  }
+  .cs-124-facial-treatment-1:before {
+    content: "\f17b";
+  }
+  .cs-026-candle:before {
+    content: "\f119";
+  }
+  .cs-129-aromatherapy-1:before {
+    content: "\f180";
+  }
+  .cs-093-hot-stone-1:before {
+    content: "\f15c";
+  }
+  .cs-117-branch-1:before {
+    content: "\f174";
+  }
+  .cs-063-time:before {
+    content: "\f13e";
+  }
+  .cs-100-make-up:before {
+    content: "\f163";
+  }
+  .cs-123-plant:before {
+    content: "\f17a";
+  }
+  .cs-073-spa-2:before {
+    content: "\f148";
+  }
+  .cs-012-towel:before {
+    content: "\f10b";
+  }
+  .cs-053-slippers:before {
+    content: "\f134";
+  }
+  .cs-028-comb:before {
+    content: "\f11b";
+  }
+  .cs-081-acupuncture-1:before {
+    content: "\f150";
+  }
+  .cs-061-sauna-1:before {
+    content: "\f13c";
+  }
+  .cs-020-essential-oil:before {
+    content: "\f113";
+  }
+  .cs-087-spa-candles:before {
+    content: "\f156";
+  }
+  .cs-025-bamboo:before {
+    content: "\f118";
+  }
+  .cs-006-cream-1:before {
+    content: "\f105";
+  }
+  .cs-079-acupuncture:before {
+    content: "\f14e";
+  }
+  .cs-075-shower-1:before {
+    content: "\f14a";
+  }
+  .cs-069-skin:before {
+    content: "\f144";
+  }
+  .cs-097-wax:before {
+    content: "\f160";
+  }
+  .cs-126-skincare:before {
+    content: "\f17d";
+  }
+  .cs-041-dropper:before {
+    content: "\f128";
+  }
+  .cs-078-spa-4:before {
+    content: "\f14d";
+  }
+  .cs-050-oil-1:before {
+    content: "\f131";
+  }
+  .cs-092-massage-3:before {
+    content: "\f15b";
+  }
+  .cs-001-relax-stones:before {
+    content: "\f100";
+  }
+  .cs-084-cosmetics:before {
+    content: "\f153";
+  }
+  .cs-115-branch:before {
+    content: "\f172";
+  }
+  .cs-052-shower:before {
+    content: "\f133";
+  }
+  .cs-022-bathrobe:before {
+    content: "\f115";
+  }
+  .cs-082-bamboo-3:before {
+    content: "\f151";
+  }
+  .cs-098-acupuncture-2:before {
+    content: "\f161";
+  }
+  .cs-007-spa:before {
+    content: "\f106";
+  }
+  .cs-094-beauty-treatment:before {
+    content: "\f15d";
+  }
+  .cs-107-shower-2:before {
+    content: "\f16a";
+  }
+  .cs-122-focus-2:before {
+    content: "\f179";
+  }
+  .cs-120-focus:before {
+    content: "\f177";
+  }
+  .cs-005-gel:before {
+    content: "\f104";
+  }
+  .cs-121-focus-1:before {
+    content: "\f178";
+  }
+  .cs-131-herbal-2:before {
+    content: "\f182";
+  }
+  .cs-008-smartphone:before {
+    content: "\f107";
+  }
+  .cs-045-honey-jar:before {
+    content: "\f12c";
+  }
+  .cs-105-essential-oil-3:before {
+    content: "\f168";
+  }
+  .cs-112-herbal-1:before {
+    content: "\f16f";
+  }
+  .cs-042-flower:before {
+    content: "\f129";
+  }
+  .cs-086-flower-2:before {
+    content: "\f155";
+  }
+  .cs-001-placeholder:before {
+    content: "\f184";
+  }
+  .cs-002-map:before {
+    content: "\f185";
+  }
+  .cs-003-dollar:before {
+    content: "\f186";
+  }
+  .cs-004-chat:before {
+    content: "\f187";
+  }
+  .cs-005-user:before {
+    content: "\f188";
+  }
+  .cs-006-analytics:before {
+    content: "\f189";
+  }
+  .cs-007-analytics-1:before {
+    content: "\f18a";
+  }
+  .cs-008-analytics-2:before {
+    content: "\f18b";
+  }
+  .cs-009-analytics-3:before {
+    content: "\f18c";
+  }
+  .cs-010-analytics-4:before {
+    content: "\f18d";
+  }
+  .cs-011-analytics-5:before {
+    content: "\f18e";
+  }
+  .cs-012-chat-1:before {
+    content: "\f18f";
+  }
+  .cs-013-chat-2:before {
+    content: "\f190";
+  }
+  .cs-014-chat-3:before {
+    content: "\f191";
+  }
+  .cs-015-chat-4:before {
+    content: "\f192";
+  }
+  .cs-016-credit-card:before {
+    content: "\f193";
+  }
+  .cs-017-credit-card-1:before {
+    content: "\f194";
+  }
+  .cs-018-voice-message:before {
+    content: "\f195";
+  }
+  .cs-019-rotation-lock:before {
+    content: "\f196";
+  }
+  .cs-020-ballot:before {
+    content: "\f197";
+  }
+  .cs-021-email:before {
+    content: "\f198";
+  }
+  .cs-022-email-1:before {
+    content: "\f199";
+  }
+  .cs-023-wireframe:before {
+    content: "\f19a";
+  }
+  .cs-024-wireframe-1:before {
+    content: "\f19b";
+  }
+  .cs-025-wireframe-2:before {
+    content: "\f19c";
+  }
+  .cs-026-dashboard:before {
+    content: "\f19d";
+  }
+  .cs-027-inside:before {
+    content: "\f19e";
+  }
+  .cs-028-outside:before {
+    content: "\f19f";
+  }
+  .cs-029-menu:before {
+    content: "\f1a0";
+  }
+  .cs-030-search:before {
+    content: "\f1a1";
+  }
+  .cs-031-trash:before {
+    content: "\f1a2";
+  }
+  .cs-032-bulleye:before {
+    content: "\f1a3";
+  }
+  .cs-033-graph:before {
+    content: "\f1a4";
+  }
+  .cs-034-graph-1:before {
+    content: "\f1a5";
+  }
+  .cs-035-command:before {
+    content: "\f1a6";
+  }
+  .cs-036-home:before {
+    content: "\f1a7";
+  }
+  .cs-037-double-click:before {
+    content: "\f1a8";
+  }
+  .cs-038-box:before {
+    content: "\f1a9";
+  }
+  .cs-039-paperclip:before {
+    content: "\f1aa";
+  }
+  .cs-040-font:before {
+    content: "\f1ab";
+  }
+  .cs-041-search-1:before {
+    content: "\f1ac";
+  }
+  .cs-042-paint-roller:before {
+    content: "\f1ad";
+  }
+  .cs-043-active:before {
+    content: "\f1ae";
+  }
+  .cs-044-alarm:before {
+    content: "\f1af";
+  }
+  .cs-045-calendar:before {
+    content: "\f1b0";
+  }
+  .cs-046-calendar-1:before {
+    content: "\f1b1";
+  }
+  .cs-047-stopwatch:before {
+    content: "\f1b2";
+  }
+  .cs-048-book:before {
+    content: "\f1b3";
+  }
+  .cs-049-hashtag:before {
+    content: "\f1b4";
+  }
+  .cs-050-speech-bubble:before {
+    content: "\f1b5";
+  }
+  .cs-051-algorithm:before {
+    content: "\f1b6";
+  }
+  .cs-052-cloud-network:before {
+    content: "\f1b7";
+  }
+  .cs-053-hierarchy:before {
+    content: "\f1b8";
+  }
+  .cs-054-shift:before {
+    content: "\f1b9";
+  }
+  .cs-055-social-media:before {
+    content: "\f1ba";
+  }
+  .cs-056-web-programming:before {
+    content: "\f1bb";
+  }
+  .cs-057-smartphone:before {
+    content: "\f1bc";
+  }
+  .cs-058-web-browser:before {
+    content: "\f1bd";
+  }
+  .cs-059-web-browser-1:before {
+    content: "\f1be";
+  }
+  .cs-060-add:before {
+    content: "\f1bf";
+  }
+  .cs-061-internet:before {
+    content: "\f1c0";
+  }
+  .cs-062-desktop:before {
+    content: "\f1c1";
+  }
+  .cs-063-web-programming-1:before {
+    content: "\f1c2";
+  }
+  .cs-064-web-search-engine:before {
+    content: "\f1c3";
+  }
+  .cs-065-line-graph:before {
+    content: "\f1c4";
+  }
+  .cs-066-line-graph-1:before {
+    content: "\f1c5";
+  }
+  .cs-067-increase:before {
+    content: "\f1c6";
+  }
+  .cs-068-back-camera:before {
+    content: "\f1c7";
+  }
+  .cs-069-smartphone-1:before {
+    content: "\f1c8";
+  }
+  .cs-070-rotate:before {
+    content: "\f1c9";
+  }
+  .cs-071-smartphone-2:before {
+    content: "\f1ca";
+  }
+  .cs-072-calculator:before {
+    content: "\f1cb";
+  }
+  .cs-073-key:before {
+    content: "\f1cc";
+  }
+  .cs-074-office-building:before {
+    content: "\f1cd";
+  }
+  .cs-075-folder:before {
+    content: "\f1ce";
+  }
+  .cs-076-add-1:before {
+    content: "\f1cf";
+  }
+  .cs-077-folder-1:before {
+    content: "\f1d0";
+  }
+  .cs-078-graphs:before {
+    content: "\f1d1";
+  }
+  .cs-079-alarm-clock:before {
+    content: "\f1d2";
+  }
+  .cs-080-hosting-servers:before {
+    content: "\f1d3";
+  }
+  .cs-081-upload:before {
+    content: "\f1d4";
+  }
+  .cs-082-download:before {
+    content: "\f1d5";
+  }
+  .cs-083-copy:before {
+    content: "\f1d6";
+  }
+  .cs-084-image:before {
+    content: "\f1d7";
+  }
+  .cs-085-wishlist:before {
+    content: "\f1d8";
+  }
+  .cs-086-menu-1:before {
+    content: "\f1d9";
+  }
+  .cs-087-phone-call:before {
+    content: "\f1da";
+  }
+  .cs-088-reload:before {
+    content: "\f1db";
+  }
+  .cs-089-chat-5:before {
+    content: "\f1dc";
+  }
+  .cs-090-reward:before {
+    content: "\f1dd";
+  }
+  .cs-091-command-line:before {
+    content: "\f1de";
+  }
+  .cs-092-arrow:before {
+    content: "\f1df";
+  }
+  .cs-093-add-2:before {
+    content: "\f1e0";
+  }
+  .cs-094-book-1:before {
+    content: "\f1e1";
+  }
+  .cs-095-love-message:before {
+    content: "\f1e2";
+  }
+  .cs-096-new-window:before {
+    content: "\f1e3";
+  }
+  .cs-097-video:before {
+    content: "\f1e4";
+  }
+  .cs-098-share:before {
+    content: "\f1e5";
+  }
+  .cs-099-folder-2:before {
+    content: "\f1e6";
+  }
+  .cs-100-stop:before {
+    content: "\f1e7";
+  }
+  .cs-101-coding:before {
+    content: "\f1e8";
+  }
+  .cs-102-add-3:before {
+    content: "\f1e9";
+  }
+  .cs-103-diamond:before {
+    content: "\f1ea";
+  }
+  .cs-104-repeat:before {
+    content: "\f1eb";
+  }
+  .cs-105-cloud-computing:before {
+    content: "\f1ec";
+  }
+  .cs-106-share-1:before {
+    content: "\f1ed";
+  }
+  .cs-107-translation:before {
+    content: "\f1ee";
+  }
+  .cs-108-airplay:before {
+    content: "\f1ef";
+  }
+  .cs-109-click:before {
+    content: "\f1f0";
+  }
+  .cs-110-resize:before {
+    content: "\f1f1";
+  }
+  .cs-111-slow-motion:before {
+    content: "\f1f2";
+  }
+  .cs-112-shopping-bag:before {
+    content: "\f1f3";
+  }
+  .cs-113-filter:before {
+    content: "\f1f4";
+  }
+  .cs-114-list:before {
+    content: "\f1f5";
+  }
+  .cs-115-equalizer:before {
+    content: "\f1f6";
+  }
+  .cs-116-send:before {
+    content: "\f1f7";
+  }
+  .cs-117-voice-search:before {
+    content: "\f1f8";
+  }
+  .cs-118-server:before {
+    content: "\f1f9";
+  }
+  .cs-119-server-1:before {
+    content: "\f1fa";
+  }
+  .cs-120-color-palette:before {
+    content: "\f1fb";
+  }
+  .cs-121-web-design:before {
+    content: "\f1fc";
+  }
+  .cs-122-target:before {
+    content: "\f1fd";
+  }
+  .cs-123-speech-bubble-1:before {
+    content: "\f1fe";
+  }
+  .cs-124-settings:before {
+    content: "\f1ff";
+  }
+  .cs-125-worldwide:before {
+    content: "\f200";
+  }
+  .cs-126-shuttle:before {
+    content: "\f201";
+  }
+  .cs-127-shield:before {
+    content: "\f202";
+  }
+  .cs-128-wallet:before {
+    content: "\f203";
+  }
+  .cs-129-cloud-computing-1:before {
+    content: "\f204";
+  }
+  .cs-130-help:before {
+    content: "\f205";
+  }
+  .cs-131-seo:before {
+    content: "\f206";
+  }
+  .cs-132-click-1:before {
+    content: "\f207";
+  }
+  .cs-133-flow-chart:before {
+    content: "\f208";
+  }
+  .cs-134-pay-day:before {
+    content: "\f209";
+  }
+  .cs-135-priority:before {
+    content: "\f20a";
+  }
+  .cs-136-speech-bubble-2:before {
+    content: "\f20b";
+  }
+  .cs-137-speech-bubble-3:before {
+    content: "\f20c";
+  }
+  .cs-138-list-1:before {
+    content: "\f20d";
+  }
+  .cs-139-faq:before {
+    content: "\f20e";
+  }
+  .cs-140-settings-1:before {
+    content: "\f20f";
+  }
+  .cs-141-binary-code:before {
+    content: "\f210";
+  }
+  .cs-142-click-2:before {
+    content: "\f211";
+  }
+  .cs-143-album:before {
+    content: "\f212";
+  }
+  .cs-144-price:before {
+    content: "\f213";
+  }
+  .cs-145-tool:before {
+    content: "\f214";
+  }
+  .cs-146-time:before {
+    content: "\f215";
+  }
+  .cs-147-shirt:before {
+    content: "\f216";
+  }
+  .cs-148-puzzle:before {
+    content: "\f217";
+  }
+  .cs-149-deadline:before {
+    content: "\f218";
+  }
+  .cs-150-tv:before {
+    content: "\f219";
+  }
+  .cs-151-negotiation:before {
+    content: "\f21a";
+  }
+  .cs-152-layers:before {
+    content: "\f21b";
+  }
+  .cs-153-idea:before {
+    content: "\f21c";
+  }
+  .cs-154-record:before {
+    content: "\f21d";
+  }
+  .cs-155-radar:before {
+    content: "\f21e";
+  }
+  .cs-156-gamepad:before {
+    content: "\f21f";
+  }
+  .cs-157-signal:before {
+    content: "\f220";
+  }
+  .cs-158-speech-bubble-4:before {
+    content: "\f221";
+  }
+  .cs-159-server-2:before {
+    content: "\f222";
+  }
+  .cs-160-shield-1:before {
+    content: "\f223";
+  }
+  .cs-161-firewall:before {
+    content: "\f224";
+  }
+  .cs-162-process:before {
+    content: "\f225";
+  }
+  .cs-163-24-hours:before {
+    content: "\f226";
+  }
+  .cs-164-fingerprint-scan:before {
+    content: "\f227";
+  }
+  .cs-165-folder-3:before {
+    content: "\f228";
+  }
+  .cs-166-folder-4:before {
+    content: "\f229";
+  }
+  .cs-167-tongue:before {
+    content: "\f22a";
+  }
+  .cs-168-secure:before {
+    content: "\f22b";
+  }
+  .cs-169-increase-1:before {
+    content: "\f22c";
+  }
+  .cs-170-gift:before {
+    content: "\f22d";
+  }
+  .cs-171-browser:before {
+    content: "\f22e";
+  }
+  .cs-172-shield-2:before {
+    content: "\f22f";
+  }
+  .cs-173-keyboard:before {
+    content: "\f230";
+  }
+  .cs-174-filter-1:before {
+    content: "\f231";
+  }
+  .cs-175-click-3:before {
+    content: "\f232";
+  }
+  .cs-176-download-1:before {
+    content: "\f233";
+  }
+  .cs-177-file:before {
+    content: "\f234";
+  }
+  .cs-178-pantone:before {
+    content: "\f235";
+  }
+  .cs-179-avatar:before {
+    content: "\f236";
+  }
+  .cs-180-left-quote:before {
+    content: "\f237";
+  }
+  .cs-181-heart:before {
+    content: "\f238";
+  }
+  .cs-182-half-star-shape:before {
+    content: "\f239";
+  }
+  .cs-183-star-half-empty:before {
+    content: "\f23a";
+  }
+  .cs-184-star:before {
+    content: "\f23b";
+  }
+  .cs-185-star-1:before {
+    content: "\f23c";
+  }
+  .cs-186-heart-shape-outline:before {
+    content: "\f23d";
+  }
+  .cs-187-reply-arrow:before {
+    content: "\f23e";
+  }
+  .cs-188-play-button:before {
+    content: "\f23f";
+  }
+  .cs-189-play:before {
+    content: "\f240";
+  }
+  .cs-190-right-arrow:before {
+    content: "\f241";
+  }
+  .cs-191-magnifying-glass:before {
+    content: "\f242";
+  }
+  .cs-192-plus-black-symbol:before {
+    content: "\f243";
+  }
+  .cs-193-minus-symbol:before {
+    content: "\f244";
+  }
+  .cs-194-left-arrow:before {
+    content: "\f245";
+  }
+  .cs-195-right-arrow-1:before {
+    content: "\f246";
+  }
+  .cs-196-down-arrow:before {
+    content: "\f247";
+  }
+  .cs-197-:before {
+    content: "\f248";
+  }
+  .cs-198-instagram:before {
+    content: "\f249";
+  }
+  .cs-199-telegram:before {
+    content: "\f24a";
+  }
+  .cs-200-whatsapp:before {
+    content: "\f24b";
+  }
+  .cs-201-linkedin:before {
+    content: "\f24c";
+  }
+  .cs-202-viber:before {
+    content: "\f24d";
+  }
+  .cs-203-spotify:before {
+    content: "\f24e";
+  }
+  .cs-204-vk:before {
+    content: "\f24f";
+  }
+  .cs-205-facebook:before {
+    content: "\f250";
+  }
+  .cs-206-kakao-talk:before {
+    content: "\f251";
+  }
+  .cs-207-youtube:before {
+    content: "\f252";
+  }
+  .cs-208-line:before {
+    content: "\f253";
+  }
+  .cs-209-twitter:before {
+    content: "\f254";
+  }
+  .cs-210-behance:before {
+    content: "\f255";
+  }
+  .cs-211-google-play:before {
+    content: "\f256";
+  }
+  .cs-212-snapchat:before {
+    content: "\f257";
+  }
+  .cs-213-google-plus:before {
+    content: "\f258";
+  }
+  .cs-214-odnoklassniki:before {
+    content: "\f259";
+  }
+  .cs-215-messenger:before {
+    content: "\f25a";
+  }
+  .cs-216-skype:before {
+    content: "\f25b";
+  }
+  .cs-217-google-drive:before {
+    content: "\f25c";
+  }
+  .cs-218-slack:before {
+    content: "\f25d";
+  }
+  .cs-219-open-source:before {
+    content: "\f25e";
+  }
+  .cs-220-twitter-1:before {
+    content: "\f25f";
+  }
+  .cs-221-vimeo:before {
+    content: "\f260";
+  }
+  .cs-222-evernote:before {
+    content: "\f261";
+  }
+  .cs-223-blogger:before {
+    content: "\f262";
+  }
+  .cs-224-google-hangouts:before {
+    content: "\f263";
+  }
+  .cs-225-yelp:before {
+    content: "\f264";
+  }
+  .cs-226-dropbox:before {
+    content: "\f265";
+  }
+  .cs-227-stack-overflow:before {
+    content: "\f266";
+  }
+  .cs-228-github:before {
+    content: "\f267";
+  }
+  .cs-229-codepen:before {
+    content: "\f268";
+  }
+  .cs-230-github-1:before {
+    content: "\f269";
+  }
+  .cs-231-envato:before {
+    content: "\f26a";
+  }
+  .cs-232-delicious:before {
+    content: "\f26b";
+  }
+  .cs-233-pinterest-round-logo:before {
+    content: "\f26c";
+  }
+  .cs-234-linkedin-logo:before {
+    content: "\f26d";
+  }
+  .cs-235-dribble-big-logo:before {
+    content: "\f26e";
+  }
+  .cs-236-linux-platform:before {
+    content: "\f26f";
+  }
+  .cs-237-python:before {
+    content: "\f270";
+  }
+  .cs-238-sketch:before {
+    content: "\f271";
+  }
+  .cs-239-diamond-1:before {
+    content: "\f272";
+  }
+  .cs-240-wordpress-logo:before {
+    content: "\f273";
+  }
+  .cs-241-adobe:before {
+    content: "\f274";
+  }
+  .cs-242-html-5:before {
+    content: "\f275";
+  }
+  .cs-243-css-3:before {
+    content: "\f276";
+  }
+  .cs-244-php:before {
+    content: "\f277";
+  }
+  .cs-245-file-1:before {
+    content: "\f278";
+  }
+  .cs-246-js:before {
+    content: "\f279";
+  }
+  .cs-247-sql:before {
+    content: "\f27a";
+  }
+  .cs-248-zip:before {
+    content: "\f27b";
+  }
+  .cs-249-back:before {
+    content: "\f27c";
+  }
+  .cs-250-next:before {
+    content: "\f27d";
+  }
+  .cs-251-slack-1:before {
+    content: "\f27e";
+  }
+  .cs-252-steam:before {
+    content: "\f27f";
+  }
+  .cs-253-git:before {
+    content: "\f280";
+  }
+  .cs-254-bookmark:before {
+    content: "\f281";
+  }
+  .cs-255-check:before {
+    content: "\f282";
+  }
+  .cs-256-cancel:before {
+    content: "\f283";
+  }
+  .cs-002-map-1:before {
+    content: "\e900";
+  }
+  .cs-018-voice-message-1:before {
+    content: "\e901";
+  }
+  .cs-019-rotation-lock-1:before {
+    content: "\e902";
+  }
+  .cs-027-inside-1:before {
+    content: "\e903";
+  }
+  .cs-028-outside-1:before {
+    content: "\e904";
+  }
+  .cs-067-increase-1:before {
+    content: "\e905";
+  }
+  .cs-120-color-palette-1:before {
+    content: "\e906";
+  }
+  .cs-122-target-1:before {
+    content: "\e907";
+  }
+  .cs-126-shuttle-1:before {
+    content: "\e908";
+  }
+  .cs-140-settings-1-1:before {
+    content: "\e909";
+  }
+  .cs-163-24-hours-1:before {
+    content: "\e90a";
+  }
+  .cs-176-download-1-1:before {
+    content: "\e90b";
+  }
+  .cs-179-avatar-1:before {
+    content: "\e90c";
+  }
+  .cs-180-left-quote-1:before {
+    content: "\e90d";
+  }
+  .cs-181-heart-1:before {
+    content: "\e90e";
+  }
+  .cs-183-star-half-empty-1:before {
+    content: "\e90f";
+  }
+  .cs-184-star-1:before {
+    content: "\e910";
+  }
+  .cs-185-star-1-1:before {
+    content: "\e911";
+  }
+  .cs-186-heart-shape-outline-1:before {
+    content: "\e912";
+  }
+  .cs-191-magnifying-glass-1:before {
+    content: "\e913";
+  }
+  .cs-192-plus-black-symbol-1:before {
+    content: "\e914";
+  }
+  .cs-199-telegram-1:before {
+    content: "\e915";
+  }
+  .cs-235-dribble-big-logo-1:before {
+    content: "\e916";
+  }
+  .cs-256-cancel-1:before {
+    content: "\e917";
+  }
+  

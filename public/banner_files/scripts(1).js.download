@@ -1,0 +1,331 @@
+(function ($, elementor) {
+    "use strict";
+    var jthemes = {
+ 
+        init: function () {
+
+            var widgets = {
+                'jthemes-slider.default': jthemes.jthemes_slider,
+                'jthemes-partner.default': jthemes.jthemes_partner,
+                'jthemes-counter.default': jthemes.jthemes_counter,
+                'jthemes-testimonials.default': jthemes.jthemes_testimonials,
+                'jthemes-video-popup.default': jthemes.jthemes_Video_Popup,
+                'jthemes-posts.default': jthemes.jthemes_Post_Slider,
+                'jthemes-countdown.default': jthemes.jthemes_Countdown,
+                'jthemes-loadmore.default': jthemes.jthemes_Loadmore
+            };
+            $.each(widgets, function (widget, callback) {
+                elementor.hooks.addAction('frontend/element_ready/' + widget, callback);
+            });
+
+        },
+ 
+        /* ----------------------------------------------------------- */
+        /*  Mainslider
+        /* ----------------------------------------------------------- */
+        jthemes_slider: function ($scope) {
+
+            var $container = $scope.find('.swiper-group-1');
+
+            $container.each(function () {
+                var swiper_1_items = new Swiper(this, {
+                    slidesPerView: 1,
+                    loop: true,
+                    navigation: {
+                        nextEl: ".swiper-button-next-group-1",
+                        prevEl: ".swiper-button-prev-group-1"
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    },
+                    autoplay: {
+                        delay: 10000
+                    }
+                });
+
+                // Video popup
+                var $container1 = $scope.find('.popup-youtube');
+                if ($container1.length) {
+                    $container1.magnificPopup({
+                        type: "iframe",
+                        mainClass: "mfp-fade",
+                        removalDelay: 160,
+                        preloader: false,
+                        fixedContentPos: false
+                    });
+                }
+
+            });
+
+        },
+
+        /* ----------------------------------------------------------- */
+        /*  Partner
+        /* ----------------------------------------------------------- */
+        jthemes_partner: function ($scope) {
+
+            console.log('gggggggggggggggggggg');
+
+            var $container = $scope.find('.swiper-group-6');
+
+            $container.each(function () {
+                var swiper_6_items = new Swiper(this, {
+                    spaceBetween: 30,
+                    slidesPerView: 6,
+                    slidesPerGroup: 1,
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-pagination-group-6",
+                        clickable: true
+                    },
+                    autoplay: {
+                        delay: 10000
+                    },
+                    breakpoints: {
+                        1199: {
+                            slidesPerView: 6
+                        },
+                        800: {
+                            slidesPerView: 5
+                        },
+                        600: {
+                            slidesPerView: 4
+                        },
+                        400: {
+                            slidesPerView: 3
+                        },
+                        350: {
+                            slidesPerView: 2
+                        },
+                        150: {
+                            slidesPerView: 2
+                        }
+                    }
+                });
+
+            });
+
+        },
+
+        /* ----------------------------------------------------------- */
+        /*  Testimonials
+        /* ----------------------------------------------------------- */
+        jthemes_testimonials: function ($scope) {
+
+            var $container = $scope.find('.swiper-group-3-customers');
+
+            $container.each(function () {
+                var swiper_3_customers = new Swiper(this, {
+                    spaceBetween: 30,
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
+                    loop: true,
+                    navigation: {
+                        nextEl: ".swiper-button-next-customers",
+                        prevEl: ".swiper-button-prev-customers"
+                    },
+                    pagination: {
+                        el: ".swiper-pagination-customers",
+                        clickable: true
+                    },
+                    autoplay: {
+                        delay: 10000
+                    },
+                    breakpoints: {
+                        1199: {
+                            slidesPerView: 3
+                        },
+                        800: {
+                            slidesPerView: 2
+                        },
+                        600: {
+                            slidesPerView: 1
+                        },
+                        400: {
+                            slidesPerView: 1
+                        },
+                        250: {
+                            slidesPerView: 1
+                        }
+                    }
+                });            
+
+            });
+
+        },
+ 
+        /* ----------------------------------------------------------- */
+        /*  Popup Video
+        /* ----------------------------------------------------------- */
+        jthemes_Video_Popup: function ($scope) {
+            var $container1 = $scope.find('.video-popup-icon');
+            if ($container1.length) {
+                $container1.magnificPopup({
+                    type: "iframe",
+                    mainClass: "mfp-fade",
+                    removalDelay: 160,
+                    preloader: false,
+                    fixedContentPos: false
+                });
+            }
+        },
+
+        /* ----------------------------------------------------------- */
+        /*  Postslider
+        /* ----------------------------------------------------------- */
+        jthemes_Post_Slider: function ($scope) {
+
+            var $container = $scope.find('.swiper-group-3-customers');
+
+            $container.each(function () {
+                var swiper_3_items = new Swiper(this, {
+                    spaceBetween: 30,
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
+                    loop: true,
+                    navigation: {
+                        nextEl: ".swiper-button-next-customers",
+                        prevEl: ".swiper-button-prev-customers"
+                    },
+                    pagination: {
+                        el: ".swiper-pagination-customers",
+                        clickable: true
+                    },
+                    autoplay: {
+                        delay: 10000
+                    },
+                    on: {
+                    beforeInit: function () {
+                        // set padding left slide fleet
+                        var leftTitle = 0;
+
+                        var titleFleet = $(".title-padding-left");
+                        if (titleFleet.length > 0) {
+                            leftTitle = titleFleet.offset().left;
+                        }
+                        if ($(".box-slide-customers").length > 0) {
+                            $(".box-slide-customers").css("padding-left", leftTitle + "px");
+                        }
+                    }
+                    },
+                    breakpoints: {
+                        1199: {
+                            slidesPerView: 3
+                        },
+                        800: {
+                            slidesPerView: 2
+                        },
+                        600: {
+                            slidesPerView: 1
+                        },
+                        400: {
+                            slidesPerView: 1
+                        },
+                        250: {
+                            slidesPerView: 1
+                        }
+                    }
+                });
+
+            });
+
+        },
+
+        /* ----------------------------------------------------------- */
+        /*  Popup Video
+        /* ----------------------------------------------------------- */
+        jthemes_counter: function ($scope) {
+            var $container = $scope.find('.count');
+            if ($($container).length > 0) {
+                $container.counterUp({
+                    delay: 10,
+                    time: 600
+                });
+            }
+        },
+
+        /* ----------------------------------------------------------- */
+        /*  Countdown
+        /* ----------------------------------------------------------- */
+        jthemes_Countdown: function ($scope) {
+            var $container1 = $scope.find('.box-count-square');
+            if ($container1.length) {
+                $(".deals-countdown").each(function () {
+                    var $this   = $(this),
+                    finalDate   = $(this).data("countdown"),
+                    days        = $(this).data("days"),
+                    hours       = $(this).data("hours"),
+                    mins        = $(this).data("mins"),
+                    secs        = $(this).data("secs");
+                    $this.countdown(finalDate, function (event) {
+                        $(this).html(event.strftime("" + '<span class="countdown-section"><span class="countdown-amount font-sm-bold lh-16">%D</span><span class="countdown-period lh-14 font-xs"> '+days+' </span></span>' + '<span class="countdown-section"><span class="countdown-amount font-sm-bold lh-16">%H</span><span class="countdown-period font-xs lh-14"> '+hours+' </span></span>' + '<span class="countdown-section"><span class="countdown-amount font-sm-bold lh-16">%M</span><span class="countdown-period font-xs lh-14"> '+mins+' </span></span>' + '<span class="countdown-section"><span class="countdown-amount font-sm-bold lh-16">%S</span><span class="countdown-period font-xs lh-14"> '+secs+' </span></span>'));
+                    });
+                });
+            }
+        },
+ 
+        /* ----------------------------------------------------------- */
+        /*   Post grid ajax load
+        /* ----------------------------------------------------------- */
+ 
+        jthemes_Loadmore: function ($scope) {
+            var $container = $scope.find('.post-grid-loadmore');
+            if ($container.length > 0) {
+                $container.on('click', function (event) {
+                    event.preventDefault();
+
+                    var $that = $(this);
+                    var ajaxjsondata = $that.data('json_grid_meta');
+                    var jthemes_json_data = Object(ajaxjsondata);
+
+                    var contentwrap = $scope.find('.grid-loadmore-content'), // item contentwrap
+                    postperpage = parseInt(jthemes_json_data.posts_per_page), // post per page number
+                    showallposts = parseInt(jthemes_json_data.total_post); // total posts count
+ 
+                    var items = contentwrap.find('.grid-item'),
+                    totalpostnumber = parseInt(items.length),
+                    paged = parseInt(totalpostnumber / postperpage) + 1; // paged number
+ 
+                    $.ajax({
+                        url: jthemes_ajax.ajax_url,
+                        type: 'POST',
+                        data: {
+                            action: 'jthemes_post_ajax_loading',
+                            ajax_json_data: ajaxjsondata,
+                            paged: paged
+                        },
+                        beforeSend: function () {
+                            $('<i class="fa fa-spinner fa-spin" style="margin-left:10px"></i>').appendTo("#post-grid-loadmore").fadeIn(100);
+                        },
+                        complete: function () {
+                            $scope.find('.post-grid-loadmore .fa-spinner ').remove();
+                        }
+                    })
+ 
+                    .done(function (data) {
+ 
+                        var $pstitems = $(data);
+                        $scope.find('.grid-loadmore-content').append($pstitems);
+                        var newLenght = contentwrap.find('.grid-item').length;
+
+                        if (showallposts <= newLenght) {
+                            $scope.find('.post-grid-loadmore').fadeOut(300, function () {
+                                $scope.find('.post-grid-loadmore').remove();
+                            });
+                        }
+ 
+                    })
+ 
+                    .fail(function () {
+                        $scope.find('.post-grid-loadmore').remove();
+                    });
+                });
+            }
+        },
+ 
+    };
+
+    $(window).on('elementor/frontend/init', jthemes.init);
+
+ }(jQuery, window.elementorFrontend));

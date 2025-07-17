@@ -1,0 +1,191 @@
+(function($){
+	'use strict';	
+	$( window ).on( 'elementor/frontend/init', function() {
+
+		var owl_carousel = function(){
+			$('.owl-carousel-main').each( function() {
+				var $carousel = $(this);
+				var $rtl = ($carousel.data('rtl') !== undefined) ? $carousel.data('rtl') : false;
+				var $items = ($carousel.data('items') !== undefined) ? $carousel.data('items') : 1;
+				var $items_tablet = ($carousel.data('items-tablet') !== undefined) ? $carousel.data('items-tablet') : 1;
+				var $items_mobile_landscape = ($carousel.data('items-mobile-landscape') !== undefined) ? $carousel.data('items-mobile-landscape') : 1;
+				var $items_mobile_portrait = ($carousel.data('items-mobile-portrait') !== undefined) ? $carousel.data('items-mobile-portrait') : 1;
+
+				$carousel.owlCarousel ({
+					rtl: $rtl,
+					loop : ($carousel.data('loop') !== undefined) ? $carousel.data('loop') : true,
+					items : $carousel.data('items'),
+					margin : ($carousel.data('margin') !== undefined) ? $carousel.data('margin') : 30,
+					dots : ($carousel.data('dots') !== undefined) ? $carousel.data('dots') : true,
+					nav : ($carousel.data('nav') !== undefined) ? $carousel.data('nav') : false,
+					navText : ['<i class="fal fa-long-arrow-up"></i>', '<i class="fal fa-long-arrow-down"></i>'],
+					autoplay : ($carousel.data('autoplay') !== undefined) ? $carousel.data('autoplay') : true,
+					autoplayTimeout : ($carousel.data('autoplay-timeout') !== undefined) ? $carousel.data('autoplay-timeout') : 4500,
+					animateIn : ($carousel.data('animatein') !== undefined) ? $carousel.data('animatein') : false,
+					animateOut : ($carousel.data('animateout') !== undefined) ? $carousel.data('animateout') : false,
+					mouseDrag : ($carousel.data('mouse-drag') !== undefined) ? $carousel.data('mouse-drag') : true,
+					autoWidth : ($carousel.data('auto-width') !== undefined) ? $carousel.data('auto-width') : false,
+					autoHeight : ($carousel.data('auto-height') !== undefined) ? $carousel.data('auto-height') : false,
+					center : ($carousel.data('center') !== undefined) ? $carousel.data('center') : false,
+					responsiveClass: true,
+					dotsEachNumber: true,
+					smartSpeed: 3000,
+					autoplayHoverPause: true,
+					responsive : {
+						0 : {
+							items : $items_mobile_portrait,
+						},
+						480 : {
+							items : $items_mobile_landscape,
+						},
+						768 : {
+							items : $items_tablet,
+						},
+						992 : {
+							items : $items,
+						}
+					}
+				});
+
+				var totLength = $('.owl-dot', $carousel).length;
+				$('.total-no', $carousel).html(totLength);
+				$('.current-no', $carousel).html(totLength);
+				$carousel.owlCarousel();
+				$('.current-no', $carousel).html(1);
+				$carousel.on('changed.owl.carousel', function(event) {
+					var total_items = event.page.count;
+					var currentNum = event.page.index + 1;
+					$('.total-no', $carousel ).html(total_items);
+					$('.current-no', $carousel).html(currentNum);
+				});
+			});
+		}; // end
+
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/transp-testmonials.default', function($scope, $){
+			owl_carousel();
+		} );
+		
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/transp-partner.default', function($scope, $){
+			owl_carousel();
+		} );
+		
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/transp-gallery.default', function($scope, $){
+			//owl_carousel();
+			var owl = $('.gallery-photo');
+			owl.owlCarousel({
+				items: 4,
+				loop:true,
+				autoplay:true,
+				navBy: 1,
+				autoplayTimeout: 4500,
+				autoplayHoverPause: false,
+				smartSpeed: 3000,
+				responsive:{
+					0:{
+						items:1
+					},
+					640:{
+						items:1
+					},
+					767:{
+						items:2
+					},
+					768:{
+						items:2
+					},
+					991:{
+						items:3
+					},				
+					1000:{
+						items:4
+					}
+				}
+		});
+		} );
+
+
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/transp-portfolio.default', function($scope, $){
+			
+			var $container = $scope.find('.swiper-group-4');
+
+			$container.each(function () {
+				var swiper_4_items = new Swiper(this, {
+				spaceBetween: 30,
+				slidesPerView: 4,
+				slidesPerGroup: 1,
+				loop: true,
+				navigation: {
+					nextEl: ".swiper-button-next-group-4",
+					prevEl: ".swiper-button-prev-group-4"
+				},
+				pagination: {
+					el: ".swiper-pagination-group-4",
+					clickable: true
+				},
+				autoplay: {
+					delay: 10000
+				},
+				breakpoints: {
+					1399: {
+						slidesPerView: 4
+					},
+					1100: {
+						slidesPerView: 3
+					},
+					780: {
+						slidesPerView: 2
+					},
+					500: {
+						slidesPerView: 1
+					},
+					400: {
+						slidesPerView: 1
+					},
+					350: {
+						slidesPerView: 1
+					},
+					150: {
+						slidesPerView: 1
+					}
+				}
+			});
+
+			});
+			
+		} );
+
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/transp-pricing.default', function($scope, $){
+			
+			var $container = $scope.find('.pricing-content');
+			if ($container.length) {
+				$container.each(function () {
+					var checkBox 	= $container.find("#cb_billed_type");
+					var forMonth 	= $container.find(".for-month");
+					var forYear 	= $container.find(".for-year");
+					var billMonth 	= $container.find(".text-billed-month");
+					var billYear 	= $container.find(".text-billed-year");
+					
+					checkBox.on('change', function() {
+						for (var i = 0; i < forMonth.length; i++) {
+							if (checkBox.is(":checked")) {
+								forYear.eq(i).addClass("display-year");
+								billYear.addClass("active");
+								billMonth.removeClass("active");
+								forMonth.eq(i).removeClass("display-month");
+							} else {
+								forYear.eq(i).removeClass("display-year");
+								billMonth.addClass("active");
+								billYear.removeClass("active");
+								forMonth.eq(i).addClass("display-month");
+							}
+						}
+					});					
+
+				});
+			}
+
+		} );
+
+	});	
+
+})(jQuery);
