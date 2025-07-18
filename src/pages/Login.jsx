@@ -2,36 +2,40 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../dataPanel";
+import { useQueryClient } from "@tanstack/react-query";
 
 const Login = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    setError("");
+ const handleLogin = async (e) => {
+  e.preventDefault();
+  setError("");
+  try {
+    const res = await fetch(`${baseUrl}/api/auth/login`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id, password }),
+    });
 
-    try {
-      const res = await fetch(`${baseUrl}/api/auth/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id, password }),
-      });
+    const data = await res.json();
 
-      const data = await res.json();
+    if (!res.ok) throw new Error(data.message || "Login failed");
 
-      if (!res.ok) throw new Error(data.message || "Login failed");
+    localStorage.setItem("token", data.data.token);
+    localStorage.setItem("user", JSON.stringify(data.data.user));
 
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user", JSON.stringify(data.user));
+    // Tell React Query to refetch currentUser so Navbar updates
+    queryClient.invalidateQueries(["currentUser"]);
 
-      navigate("/"); // Redirect to home/dashboard
-    } catch (err) {
-      setError(err.message);
-    }
-  };
+    navigate("/"); // Redirect to home/dashboard
+  } catch (err) {
+    setError(err.message);
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-100 px-4">

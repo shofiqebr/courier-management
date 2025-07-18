@@ -96,7 +96,7 @@ const Register = () => {
         >
           <option value="customer">Customer</option>
           <option value="agent">Delivery Agent</option>
-          <option value="admin">Admin</option>
+          {/* <option value="admin">Admin</option> */}
         </select>
         <button
           type="submit"
