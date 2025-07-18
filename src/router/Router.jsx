@@ -5,6 +5,11 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/dashboard/Dashboard";
+import AdminRoute from "./AdminRoute";
+import AllUsers from "../pages/dashboard/AllUser";
+import AdminOverview from "../pages/dashboard/AdminOverview";
+import ManageParcels from "../pages/dashboard/ManageParcels";
+import Analytics from "../pages/dashboard/Analytics";
 
 export const router = createBrowserRouter([
   {
@@ -25,15 +30,21 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/dashboard",
-    element: <Dashboard />,
-    children: [
-      {
-        path: "/dashboard",
-        element: <div>dsfd</div>,
-      },
-   
-    ],
-  },
+{
+  path: "/dashboard",
+  element: <AdminRoute />, // protect with role check
+  children: [
+    {
+      path: "/dashboard",
+      element: <Dashboard />, 
+      children: [
+        { path: "", element: <AdminOverview /> },
+        { path: "users", element: <AllUsers /> },
+        { path: "parcels", element: <ManageParcels /> },
+        { path: "analytics", element: <Analytics /> },
+      ],
+    },
+  ],
+}
+
 ]);
