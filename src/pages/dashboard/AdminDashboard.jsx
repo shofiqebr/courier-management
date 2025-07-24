@@ -1,8 +1,8 @@
-import React from 'react';
-import Sidebar from '../components/Sidebar';
-import Topbar from '../components/Topbar';
-import DashboardCard from '../components/DashboardCard';
+
 import { FaBox, FaUser, FaMoneyBill, FaTimesCircle } from 'react-icons/fa';
+import Sidebar from './Sidebar';
+import Topbar from './Topbar';
+import DashboardCard from './DashboardCard';
 
 const AdminDashboard = () => {
   // Example stats
