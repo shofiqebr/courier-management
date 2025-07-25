@@ -1,24 +1,53 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 
 const AgentDashboard = () => {
-  return (
-    <div className="flex min-h-screen">
-      {/* Sidebar */}
-      <aside className="w-64 bg-blue-900 text-white p-4">
-        <h2 className="text-xl font-bold mb-6">Agent Panel</h2>
-        <nav className="flex flex-col space-y-4">
-          <Link to="/" className="hover:text-yellow-400">Home</Link>
-          <Link to="" className="hover:text-yellow-400">Dashboard</Link>
-          <Link to="assigned" className="hover:text-yellow-400">Assigned Parcels</Link>
-          <Link to="update" className="hover:text-yellow-400">Update Status</Link>
-        </nav>
-      </aside>
+  const user = JSON.parse(localStorage.getItem("user")) || {};
+  const navigate = useNavigate();
 
-      {/* Main Content */}
-      <main className="flex-1 p-6 bg-gray-100">
-        <Outlet />
-      </main>
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      {/* Top Navbar */}
+      <header className="bg-gray-900 text-white px-6 py-4 flex justify-between items-center">
+        <h1 className="text-xl font-bold">Courier Management System</h1>
+        <div className="flex items-center gap-4">
+          <span className="text-sm">
+            {user?.name} ({user?.role})
+          </span>
+          <button
+            onClick={handleLogout}
+            className="bg-red-600 px-3 py-1 rounded hover:bg-red-700 text-sm"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+
+      {/* Main Content Area */}
+      <div className="flex flex-1">
+        {/* Sidebar */}
+        <aside className="w-64 bg-gray-800 text-white p-4">
+          <h2 className="text-xl font-bold mb-6">Agent Panel</h2>
+          <nav className="flex flex-col gap-2">
+            <Link to="/" className="hover:bg-gray-700 p-2 rounded">
+              Home
+            </Link>
+            <Link to="" className="hover:bg-gray-700 p-2 rounded">
+              Assigned Parcels
+            </Link>
+          </nav>
+        </aside>
+
+        {/* Dynamic Content */}
+        <main className="flex-1 p-6 bg-gray-100">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 };

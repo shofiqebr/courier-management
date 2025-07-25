@@ -9,7 +9,7 @@ import AdminRoute from "./AdminRoute";
 import AllUsers from "../pages/dashboard/AllUser";
 import AdminOverview from "../pages/dashboard/AdminOverview";
 import ManageParcels from "../pages/dashboard/ManageParcels";
-import Analytics from "../pages/dashboard/Analytics";
+
 import CustomerRoute from "./CustomerRoute";
 import CustomerDashboardLayout from "../pages/dashboard/customer/CustomerDashboard";
 import MyParcels from "../pages/dashboard/customer/MyParcel";
@@ -19,6 +19,8 @@ import ParcelDetails from "../pages/dashboard/ParcelDetails";
 import AgentRoute from "./AgentRoute";
 import AgentDashboard from "../pages/dashboard/agent/agentdashboard";
 import AssignedParcels from "../pages/dashboard/agent/AssignedParcels";
+import UpdateParcelStatus from "../pages/dashboard/agent/UpdateParcelStatus";
+
 
 export const router = createBrowserRouter([
   {
@@ -51,7 +53,6 @@ export const router = createBrowserRouter([
         { path: "/admin/dashboard/users", element: <AllUsers /> },
         { path: "/admin/dashboard/parcels", element: <ManageParcels /> },
         { path: "/admin/dashboard/parcel/:trackingId", element:<ParcelDetails /> },
-        { path: "/admin/dashboard/analytics", element: <Analytics /> },
       ],
     },
   ],
@@ -59,11 +60,17 @@ export const router = createBrowserRouter([
   // Agent Dashboard
   {
     path: "/agent/dashboard",
-    element: <AgentRoute><AgentDashboard /></AgentRoute>,
+    element: <AgentRoute />,
     children: [
-      { path: "", element: <AssignedParcels /> },
-      // { path: "update/:id", element: <UpdateParcelStatus /> },
-    ],
+       { 
+        path: "/agent/dashboard", 
+        element: <AgentDashboard />,
+        children: [
+          { path: "", element: <AssignedParcels /> },
+          { path: "/agent/dashboard/update/:id", element: <UpdateParcelStatus /> },
+        ],
+      }
+    ]
   },
 
   // Customer Dashboard
