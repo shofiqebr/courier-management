@@ -1,9 +1,9 @@
-import React from 'react';
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
-const baseUrl = "http://localhost:5000"; // or your actual base URL
+const baseUrl = "https://courier-management-back.onrender.com"; // or your actual base URL
 
 const fetchParcels = async () => {
   const token = localStorage.getItem("token");
@@ -16,8 +16,12 @@ const fetchParcels = async () => {
 };
 
 const ManageParcels = () => {
-  const { data: parcels, isLoading, isError } = useQuery({
-    queryKey: ['parcels'],
+  const {
+    data: parcels,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["parcels"],
     queryFn: fetchParcels,
   });
 
@@ -44,7 +48,9 @@ const ManageParcels = () => {
                 <td className="p-3">{parcel.trackingId}</td>
                 <td className="p-3">{parcel.customer?.name || "N/A"}</td>
                 <td className="p-3">
-                  {parcel.deliveryAgent?.name || <span className="text-gray-500">Unassigned</span>}
+                  {parcel.deliveryAgent?.name || (
+                    <span className="text-gray-500">Unassigned</span>
+                  )}
                 </td>
                 <td className="p-3">{parcel.status}</td>
                 <td className="p-3 flex gap-2">

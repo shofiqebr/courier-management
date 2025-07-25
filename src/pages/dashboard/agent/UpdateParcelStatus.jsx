@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import socket from "../../../shared/socket";
 
-
 const UpdateParcelStatus = () => {
   const { id } = useParams();
   const [status, setStatus] = useState("Picked Up");
@@ -16,14 +15,17 @@ const UpdateParcelStatus = () => {
     setMessage("");
 
     try {
-      const res = await fetch(`http://localhost:5000/api/parcel/${id}/status`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-        body: JSON.stringify({ status }),
-      });
+      const res = await fetch(
+        `https://courier-management-back.onrender.com/api/parcel/${id}/status`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify({ status }),
+        }
+      );
 
       const data = await res.json();
 

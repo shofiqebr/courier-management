@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const ParcelDetails = () => {
   const { trackingId } = useParams();
-  const baseUrl = "http://localhost:5000";
+  const baseUrl = "https://courier-management-back.onrender.com";
   const token = localStorage.getItem("token");
 
   const [parcel, setParcel] = useState(null);
@@ -47,31 +48,30 @@ const ParcelDetails = () => {
   }, [token]);
 
   // Assign agent handler
- const handleAssign = async () => {
-  if (!selectedAgent) return;
-  setAssigning(true);
-  try {
-    await axios.post(
-      `${baseUrl}/api/parcel/assign-agent`,
-      {
-        parcelId: parcel._id,   // Include parcelId
-        agentId: selectedAgent, // Include agentId
-      },
-      {
-        headers: { Authorization: `Bearer ${token}` },
-      }
-    );
-    const newAgent = agents.find((a) => a._id === selectedAgent);
-    setParcel({ ...parcel, deliveryAgent: newAgent, status: 'Assigned' });
-    alert("Agent assigned successfully!");
-  } catch (err) {
-    console.error(err);
-    alert("Failed to assign agent");
-  } finally {
-    setAssigning(false);
-  }
-};
-
+  const handleAssign = async () => {
+    if (!selectedAgent) return;
+    setAssigning(true);
+    try {
+      await axios.post(
+        `${baseUrl}/api/parcel/assign-agent`,
+        {
+          parcelId: parcel._id, // Include parcelId
+          agentId: selectedAgent, // Include agentId
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+      const newAgent = agents.find((a) => a._id === selectedAgent);
+      setParcel({ ...parcel, deliveryAgent: newAgent, status: "Assigned" });
+      alert("Agent assigned successfully!");
+    } catch (err) {
+      console.error(err);
+      alert("Failed to assign agent");
+    } finally {
+      setAssigning(false);
+    }
+  };
 
   if (!parcel) return <p>Loading parcel...</p>;
 
@@ -80,13 +80,28 @@ const ParcelDetails = () => {
       <h1 className="text-2xl font-semibold mb-4">Parcel Details</h1>
 
       <div className="bg-white rounded shadow p-6 mb-4">
-        <p><strong>Tracking ID:</strong> {parcel.trackingId}</p>
-        <p><strong>Sender:</strong> {parcel.senderName}</p>
-        <p><strong>Recipient:</strong> {parcel.recipientName}</p>
-        <p><strong>Status:</strong> {parcel.status}</p>
-        <p><strong>Address:</strong> {parcel.deliveryAddress}</p>
-        <p><strong>Weight:</strong> {parcel.weight} kg</p>
-        <p><strong>Delivery Agent:</strong> {parcel.deliveryAgent?.name || "Not Assigned"}</p>
+        <p>
+          <strong>Tracking ID:</strong> {parcel.trackingId}
+        </p>
+        <p>
+          <strong>Sender:</strong> {parcel.senderName}
+        </p>
+        <p>
+          <strong>Recipient:</strong> {parcel.recipientName}
+        </p>
+        <p>
+          <strong>Status:</strong> {parcel.status}
+        </p>
+        <p>
+          <strong>Address:</strong> {parcel.deliveryAddress}
+        </p>
+        <p>
+          <strong>Weight:</strong> {parcel.weight} kg
+        </p>
+        <p>
+          <strong>Delivery Agent:</strong>{" "}
+          {parcel.deliveryAgent?.name || "Not Assigned"}
+        </p>
         <p className="mt-4">
           <a
             href={`/track/${parcel.trackingId}`}

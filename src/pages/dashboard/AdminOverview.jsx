@@ -9,7 +9,7 @@ const AdminOverview = () => {
     const fetchStats = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/analytics/stats",
+          "https://courier-management-back.onrender.com/api/analytics/stats",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -71,29 +71,30 @@ const AdminOverview = () => {
   ];
 
   const handleExportCSV = async () => {
-  try {
-    const token = localStorage.getItem("token");
-    const res = await axios.get("http://localhost:5000/api/export", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      responseType: 'blob' 
-    });
+    try {
+      const token = localStorage.getItem("token");
+      const res = await axios.get(
+        "https://courier-management-back.onrender.com/api/export",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          responseType: "blob",
+        }
+      );
 
-    // Download CSV logic
-    const url = window.URL.createObjectURL(new Blob([res.data]));
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'export.csv');
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-
-  } catch (err) {
-    console.error("Export failed", err);
-  }
-};
-
+      // Download CSV logic
+      const url = window.URL.createObjectURL(new Blob([res.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "export.csv");
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    } catch (err) {
+      console.error("Export failed", err);
+    }
+  };
 
   return (
     <div>

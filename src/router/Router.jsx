@@ -14,12 +14,12 @@ import CustomerRoute from "./CustomerRoute";
 import CustomerDashboardLayout from "../pages/dashboard/customer/CustomerDashboard";
 import MyParcels from "../pages/dashboard/customer/MyParcel";
 import CreateParcel from "../pages/dashboard/customer/CreateParcel";
-import TrackParcel from "../pages/dashboard/customer/TrackParcel";
 import ParcelDetails from "../pages/dashboard/ParcelDetails";
 import AgentRoute from "./AgentRoute";
 import AgentDashboard from "../pages/dashboard/agent/agentdashboard";
 import AssignedParcels from "../pages/dashboard/agent/AssignedParcels";
 import UpdateParcelStatus from "../pages/dashboard/agent/UpdateParcelStatus";
+import TrackParcelMap from "../components/TrackParcelMap";
 
 
 export const router = createBrowserRouter([
@@ -38,6 +38,10 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/trackParcel",
+        element: <TrackParcelMap />,
       },
     ],
   },

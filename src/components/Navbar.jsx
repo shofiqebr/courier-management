@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, } from "react-router-dom";
 import { useQueryClient, useQuery } from "@tanstack/react-query";
 
 // Utility function to get user from localStorage
@@ -49,7 +49,7 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             <Link to="/" className="hover:text-yellow-300 transition">Home</Link>
-            <Link to="/track" className="hover:text-yellow-300 transition">Track Parcel</Link>
+            <Link to="/trackParcel" className="hover:text-yellow-300 transition">Track Parcel</Link>
 
             {user && (
               <Link to={dashboardLink} className="hover:text-yellow-300 transition">Dashboard</Link>

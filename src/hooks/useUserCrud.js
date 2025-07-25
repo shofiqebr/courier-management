@@ -1,16 +1,16 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import axios from "axios";
 
-const baseUrl = 'http://localhost:5000'; // Update to your backend URL
+const baseUrl = "https://courier-management-back.onrender.com"; // Update to your backend URL
 
-const getToken = () => localStorage.getItem('token');
+const getToken = () => localStorage.getItem("token");
 
 export const useUsers = () => {
   return useQuery({
-    queryKey: ['users'],
+    queryKey: ["users"],
     queryFn: async () => {
       const res = await axios.get(`${baseUrl}/api/user`, {
-        headers: { Authorization: `Bearer ${getToken()}` }
+        headers: { Authorization: `Bearer ${getToken()}` },
       });
       return res.data.data;
     },
@@ -25,8 +25,8 @@ export const useCreateUser = () => {
       return res.data;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries(['users']);
-    }
+      queryClient.invalidateQueries(["users"]);
+    },
   });
 };
 
@@ -38,8 +38,8 @@ export const useUpdateUser = () => {
       return res.data;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries(['users']);
-    }
+      queryClient.invalidateQueries(["users"]);
+    },
   });
 };
 
@@ -50,7 +50,7 @@ export const useDeleteUser = () => {
       await axios.delete(`${baseUrl}/api/user/${id}`);
     },
     onSuccess: () => {
-      queryClient.invalidateQueries(['users']);
-    }
+      queryClient.invalidateQueries(["users"]);
+    },
   });
 };
