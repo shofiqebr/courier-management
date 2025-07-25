@@ -8,11 +8,14 @@ const AdminOverview = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/analytics/stats", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const res = await axios.get(
+          "http://localhost:5000/api/analytics/stats",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setStats(res.data.data);
       } catch (err) {
         console.error("Failed to fetch analytics", err);
@@ -29,19 +32,78 @@ const AdminOverview = () => {
 
   const statItems = [
     { label: "Total Parcels", value: stats.totalParcels, color: "bg-blue-500" },
-    { label: "Daily Bookings", value: stats.dailyBookings, color: "bg-cyan-500" },
-    { label: "Pending Deliveries", value: stats.pendingDeliveries, color: "bg-yellow-500" },
-    { label: "Completed Deliveries", value: stats.completedDeliveries, color: "bg-green-600" },
-    { label: "Cancelled Parcels", value: stats.cancelledParcels, color: "bg-red-500" },
-    { label: "Failed Deliveries", value: stats.failedDeliveries, color: "bg-red-800" },
-    { label: "Total COD Amount", value: stats.codAmount, color: "bg-orange-500" },
+    {
+      label: "Daily Bookings",
+      value: stats.dailyBookings,
+      color: "bg-cyan-500",
+    },
+    {
+      label: "Pending Deliveries",
+      value: stats.pendingDeliveries,
+      color: "bg-yellow-500",
+    },
+    {
+      label: "Completed Deliveries",
+      value: stats.completedDeliveries,
+      color: "bg-green-600",
+    },
+    {
+      label: "Cancelled Parcels",
+      value: stats.cancelledParcels,
+      color: "bg-red-500",
+    },
+    {
+      label: "Failed Deliveries",
+      value: stats.failedDeliveries,
+      color: "bg-red-800",
+    },
+    {
+      label: "Total COD Amount",
+      value: stats.codAmount,
+      color: "bg-orange-500",
+    },
     { label: "Total Users", value: stats.totalUsers, color: "bg-purple-500" },
-    { label: "Delivery Agents", value: stats.deliveryAgents, color: "bg-indigo-500" },
+    {
+      label: "Delivery Agents",
+      value: stats.deliveryAgents,
+      color: "bg-indigo-500",
+    },
   ];
+
+  const handleExportCSV = async () => {
+  try {
+    const token = localStorage.getItem("token");
+    const res = await axios.get("http://localhost:5000/api/export", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      responseType: 'blob' 
+    });
+
+    // Download CSV logic
+    const url = window.URL.createObjectURL(new Blob([res.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'export.csv');
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+  } catch (err) {
+    console.error("Export failed", err);
+  }
+};
+
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Admin Overview</h1>
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold mb-6">Admin Overview</h1>
+        <button onClick={handleExportCSV} className="bg-blue-600 text-white">
+          📥 Export Parcel Report
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {statItems.map((stat, index) => (
           <div

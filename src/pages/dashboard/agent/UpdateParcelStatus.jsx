@@ -1,5 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import socket from "../../../shared/socket";
+
 
 const UpdateParcelStatus = () => {
   const { id } = useParams();
@@ -17,7 +20,7 @@ const UpdateParcelStatus = () => {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`, // Replace this logic if token is stored elsewhere
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({ status }),
       });
@@ -26,6 +29,12 @@ const UpdateParcelStatus = () => {
 
       if (res.ok) {
         setMessage("✅ Status updated successfully!");
+
+        // Emit socket event
+        socket.emit("parcelStatusUpdated", {
+          parcelId: id,
+          newStatus: status,
+        });
       } else {
         setMessage(`❌ ${data.message || "Failed to update status."}`);
       }

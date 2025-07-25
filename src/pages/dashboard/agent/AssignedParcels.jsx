@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { baseUrl } from "../../../dataPanel";
 
@@ -63,7 +64,7 @@ const AssignedParcels = () => {
         },
         body: JSON.stringify({ status ,   deliveryAgentId: user._id }),
       });
-      console.log(status, user._id)
+      // console.log(status, user._id)
 
       const data = await res.json();
 
